@@ -1,0 +1,159 @@
+	0.Положение на число спрямо 0
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double a;
+	cin >> a;
+	
+	if (a > 0)
+	{
+		cout << "a > 0";
+	}
+	else
+	{
+		if (a == 0)
+		{
+			cout << "a = 0";
+		}
+		else
+		{
+			cout << "a < 0";
+		}
+	}
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	1.Квадранти
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double x, y;
+	cin >> x >> y;
+
+	if (x == 0)
+	{
+		if (y == 0)
+			cout << "The point is (0, 0).";
+		else
+			cout << "The point lies on Oy.";
+	}
+	else
+	{
+		if (y == 0)
+			cout << "The point lies on Ox.";
+		else
+		{
+			if (x > 0)
+			{
+				if (y > 0)
+					cout << "The point is in quadrant 1.";
+				else
+					cout << "The point is in quadrant 4.";
+			}
+			else
+			{
+				if (y > 0)
+					cout << "The point is in quadrant 2.";
+				else
+					cout << "The point is in quadrant 3.";
+			}
+		}
+	}
+	cout << endl;
+	
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	2.Сума от цифрите на петцифрено число
+	
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int x;
+	cin >> x;
+
+	int sum = x / 10000 + x / 1000 % 10 + x / 100 % 10 + x / 10 % 10 + x % 10;
+	cout << "sum = " << sum << endl;
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	3.Удвояване на десет числа
+	
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+
+	for (int i = 1; i <= 10; i++)
+	{
+		cin >> n;
+		cout << n * 2 << endl;
+	}
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	4.Звездички
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a;
+	cin >> a;
+
+	for (int i = 1; i <= a; i++)
+	{
+		for (int j = 1; j <= i; j++)
+			cout << "*";
+		cout << endl;
+	}
+	
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	5.Числа, кратни на 3 в отворен интервал
+	
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+
+	for (int k = a + 1; k < b; k++)
+		if (k % 3 == 0)
+			cout << k << endl;
+
+	system("pause");
+	return 0;
+}
