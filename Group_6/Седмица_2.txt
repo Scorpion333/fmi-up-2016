@@ -1,0 +1,141 @@
+	0.Numbers 1-100 in square - 1 for
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (int i = 1; i <= 100; i++)
+	{
+		cout << i;
+		if (i % 10 == 9)
+			cout << endl;
+		else
+			cout << " ";
+	}
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	1.Numbers 1-100 in square - 2 for-s
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (int i = 0; i <= 9; i++)
+	{
+		for (int j = 1; j <= 10; j++)
+		{
+			cout << i * 10 + j << " ";
+		}
+		cout << endl;
+	}
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	2.Numbers 0-99 in square
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (int i = 0; i <= 99; i++)
+	{
+		cout << i;
+		if (i % 10 == 9)
+			cout << endl;
+		else
+			cout << " ";
+	}
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	3.Number of digits
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	int digits = 0;
+	
+	while (n > 0)
+	{
+		digits++;
+		n = n / 10;
+	}
+	cout << "digits = " << digits << endl;
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	4.Sum of digits
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	int sum = 0;
+	
+	while (n > 0)
+	{
+		sum = sum + n % 10;
+		n = n / 10;
+	}
+	cout << "sum = " << sum << endl;
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	5.Point in the circle with centre (0, 0) and R = 2
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	double x;
+	double y;
+	cout << "x = ";
+	cin >> x;
+	cout << "y = ";
+	cin >> y;
+
+	double distance = sqrt(x*x + y*y);
+	
+	if (distance <= 2)
+	{
+		cout << "In the circle." << endl;
+	}
+	else
+	{
+		cout << "Outside the circle." << endl;
+	}
+
+	system("pause");
+	return 0;
+}
