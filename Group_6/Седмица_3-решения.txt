@@ -1,0 +1,174 @@
+	0.Capital or small letter
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char sym;
+	cin >> sym;
+	
+	if (sym >= 'A' && sym <= 'Z')
+	{
+		cout << "Capital letter." << endl;
+	}
+	else
+	{
+		if (sym >= 'a' && sym <= 'z')
+			cout << "Small letter." << endl;
+		else
+			cout << "Not a letter." << endl;
+	}
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	1.Printing capital letter
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char sym;
+	cin >> sym;
+	
+	if (sym >= 'a' && sym <= 'z')
+	{
+		char capital_letter = sym - 32;
+		cout << capital_letter << endl;
+	}
+	
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	2.How many digits?
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	int digits = 0;
+
+	for (int i = 1; i <= n; i++)
+	{
+		char sym;
+		cin >> sym;
+
+		if (sym >= '0' && sym <= '9')
+		{
+			digits++;
+		}
+	}
+	cout << "Digits: " << digits << endl;
+	
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	3.Distance
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	double x1, y1, x2, y2;
+	
+	cout << "First point: " << endl;
+	cin >> x1 >> y1;
+
+	cout << "Second point: " << endl;
+	cin >> x2 >> y2;
+
+	double distance = sqrt((x1 - x2)*(x1 - x2) + (y1 - y2)*(y1 - y2));
+	cout << "Distance: " << distance << endl;
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	4.Circle with centre (0,0) and R = 5
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	for (int x = -5; x <= 5; x++)
+	{
+		for (int y = -5; y <= 5; y++)
+		{
+			double distance = sqrt(x*x + y*y);
+			if (distance <= 5)
+				cout << "(" << x << ", " << y << ")" << endl;
+		}
+	}
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+	5. Function
+
+#include<iostream>
+using namespace std;
+
+double forth_power(double x)
+{
+	double result = x*x*x*x;
+	return result;
+}
+
+int main()
+{
+	cout << forth_power(3) << endl;
+
+	system("pause");
+	return 0;
+}
+
+--- --- --- ---
+
+
+	6. Grades
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	
+	double grade;
+	double sum = 0;
+
+	for (int i = 1; i <= n; i++)
+	{
+		cin >> grade;
+		sum = sum + grade;
+	}
+
+	cout << "Average: " << sum / n << endl;
+
+	system("pause");
+	return 0;
+}
