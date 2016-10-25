@@ -172,3 +172,38 @@ int main()
 	system("pause");
 	return 0;
 }
+
+--- --- --- ---
+
+	8. Biggest and smallest digit
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	
+	int max = 0;
+	int min = 9;
+	int current_digit;
+	
+	while(n > 0)
+	{
+		current_digit = n % 10;
+		
+		if(current_digit > max)
+			max = current_digit;
+		
+		if(current_digit < min)
+			min = current_digit;
+		
+		n = n / 10;
+	}
+	
+	cout << "max: " << max << endl;
+	cout << "min: " << min << endl;
+
+	return 0;
+}
