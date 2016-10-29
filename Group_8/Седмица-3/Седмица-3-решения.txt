@@ -17,7 +17,6 @@ int main()
 			}
 		}
 	}
-	system("pause");
 	return 0;
 }
 
@@ -40,7 +39,6 @@ int main()
 			}
 		}
 	}
-	system("pause");
 	return 0;
 }
 
@@ -63,7 +61,6 @@ int main()
 			}
 		}
 	}
-	system("pause");
 	return 0;
 }
 
@@ -87,7 +84,6 @@ int main()
 	}
 	cout << "digits = " << digits << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -111,7 +107,6 @@ int main()
 	}
 	cout << "sum = " << sum << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -144,7 +139,6 @@ int main()
 	else
 		cout << n << " is not prime." << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -175,7 +169,6 @@ int main()
 	else
 		cout << "Average grade: " << sum / br << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -206,7 +199,6 @@ int main()
 	else
 		cout << "Average grade: " << sum / br << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -233,6 +225,5 @@ int main()
 	}
 	cout << "Number of letters A: " << br << endl;
 
-	system("pause");
 	return 0;
 }

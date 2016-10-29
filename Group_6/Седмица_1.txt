@@ -25,7 +25,6 @@ int main()
 	}
 	cout << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -72,7 +71,6 @@ int main()
 	}
 	cout << endl;
 	
-	system("pause");
 	return 0;
 }
 
@@ -91,7 +89,6 @@ int main()
 	int sum = x / 10000 + x / 1000 % 10 + x / 100 % 10 + x / 10 % 10 + x % 10;
 	cout << "sum = " << sum << endl;
 
-	system("pause");
 	return 0;
 }
 
@@ -111,7 +108,6 @@ int main()
 		cin >> n;
 		cout << n * 2 << endl;
 	}
-	system("pause");
 	return 0;
 }
 
@@ -134,7 +130,6 @@ int main()
 		cout << endl;
 	}
 	
-	system("pause");
 	return 0;
 }
 
@@ -154,6 +149,5 @@ int main()
 		if (k % 3 == 0)
 			cout << k << endl;
 
-	system("pause");
 	return 0;
 }

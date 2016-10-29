@@ -26,6 +26,5 @@ int main()
 		cout << "arr[" << i << "] = " << arr[i] << endl;
 	}
 
-	system("pause");
 	return 0;
 }

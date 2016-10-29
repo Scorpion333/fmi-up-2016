@@ -15,6 +15,5 @@ int main()
 		cout << "Doubled: " << currentNumber * 2 << endl;
 	}
 	
-	system("pause");
 	return 0;
 }
