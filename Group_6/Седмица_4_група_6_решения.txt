@@ -1,0 +1,272 @@
+	1.Last digit of square
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+
+	switch (n % 10)
+	{
+	case 0: cout << "0" << endl; break;
+	case 1: cout << "1" << endl; break;
+	case 2: cout << "4" << endl; break;
+	case 3: cout << "9" << endl; break;
+	case 4: cout << "6" << endl; break;
+	case 5: cout << "5" << endl; break;
+	case 6: cout << "6" << endl; break;
+	case 7: cout << "9" << endl; break;
+	case 8: cout << "4" << endl; break;
+	case 9: cout << "1" << endl; break;
+	}
+
+	return 0;
+}
+
+--- --- --- ---
+
+	2.Easy geometry
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	char sym;
+	double A;
+	double area = 0;	// We print area later and we want to be sure it has a value.
+	
+	cin >> sym >> A;
+
+	switch (sym)
+	{
+	case 'S': area = A * A; break;
+	case 'C': area = 3.14 * A * A; break;
+	case 'R': area = 2 * A * A; break;
+	case 'T': area = (A + 2 * A) * A / 2; break;
+	case '3': area = A * A * sqrt(3) / 4; break;
+	default: cout << "No such figure." << endl;  break;
+	}
+
+	cout << area << endl;
+	return 0;
+}
+
+--- --- --- ---
+
+	3.Hard geometry
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	char sym;
+	double area = 0;	// We print area later and we want to be sure it has a value.
+	
+	cin >> sym;
+
+	switch (sym)
+	{
+	
+	case 'S':
+	{
+		double a;
+		cin >> a;
+		area = a * a;
+		break;
+	}
+	
+	case 'C':
+	{
+		double r;
+		cin >> r;
+		area = 3.14 * r * r; 
+		break;
+	}
+	
+	case 'R':
+	{
+		double a, b;
+		cin >> a >> b;
+		area = a * b;
+		break;
+	}
+	
+	case 'T':
+	{
+		double a, b, h;
+		cin >> a >> b >> h;
+		area = (a + b) * h / 2;
+		break;
+	}
+	
+	case '3':
+	{
+		double a, b, c, p;
+		cin >> a >> b >> c;
+		p = (a + b + c) / 2;
+		area = sqrt(p * (p - a) * (p - b) * (p - c));
+		break;
+	}
+	
+	default:
+	{
+		cout << "No such figure." << endl; 
+		break;
+	}
+
+	}
+	cout << area << endl;
+	return 0;
+}
+
+--- --- --- ---
+
+	3.Hard geometry - alternative
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	char sym;
+	double area = 0;	// We print area later and we want to be sure it has a value.
+	
+	cin >> sym;
+	
+	double a, b, c, p;
+
+	switch (sym)
+	{
+	case 'S':
+		cin >> a;
+		area = a * a;
+		break;
+	
+	case 'C':
+		cin >> a;
+		area = 3.14 * a * a; 
+		break;
+	
+	case 'R':
+		cin >> a >> b;
+		area = a * b;
+		break;
+	
+	case 'T':
+		cin >> a >> b >> c;
+		area = (a + b) * c / 2;
+		break;
+	
+	case '3':
+		cin >> a >> b >> c;
+		p = (a + b + c) / 2;
+		area = sqrt(p * (p - a) * (p - b) * (p - c));
+		break;
+	
+	default:
+		cout << "No such figure." << endl; 
+		break;
+	}
+
+	cout << area << endl;
+	return 0;
+}
+
+--- --- --- ---
+
+	4.Smallest power of 2 >= n
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	int power_of_2 = 1;
+
+	while (power_of_2 < n)
+	{
+		power_of_2 = power_of_2 << 1;
+	}
+	cout << power_of_2 << endl;
+
+	return 0;
+}
+
+--- --- --- ---
+
+	5.Bit B - 1 or 0
+ 
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	int n;
+	int b;
+	cin >> n >> b;
+
+	int suitable_power_of_2 = pow(2, b);
+
+	if ((n & suitable_power_of_2) == 0)
+	{
+		cout << "Bit " << b << " is 0." << endl;
+	}
+	else
+	{
+		cout << "Bit " << b << " is 1." << endl;
+	}
+	return 0;
+}
+
+--- --- --- ---
+
+	7.Printing letters without numbers
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (char letter = 'A'; letter <= 'Z'; letter++)
+	{
+		cout << letter << " ";
+	}
+	return 0;
+}
+
+--- --- --- ---
+
+
+	8.Pr. 8 - Sentence
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char sentence[] = "A phrase with a lot of A-s and a-s and an exclamation mark at the end!";
+	
+	int br = 0;
+	int i = 0;
+	while (sentence[i] != '.'  &&  sentence[i] != '!'  &&  sentence[i] != '?')
+	{
+		if (sentence[i] == 'a' || sentence[i] == 'A')
+		{
+			br++;
+		}
+		i++;
+	}
+	cout << "Number of letters A: " << br << endl;
+
+	return 0;
+}
