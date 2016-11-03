@@ -5,10 +5,11 @@
 
 #Деклариране на символен низ
 В нашите задачи ще декларираме низ по следния начин:
-char  <име на стринга>[]  =  “<съдържание на стринга>”;
+char  <име на стринга>[ ]  =  “<съдържание на стринга>”;
 
 Пример:
-char  my_string []  =  “I like C++”;
+
+char  my_string [ ]  =  “I like C++”;
 
 #Достъп да символите на низа
 Можем да разберем какъв e, например, осмият символ на  my_string  като напишем my_string[8].
@@ -17,12 +18,19 @@ char  my_string []  =  “I like C++”;
 Можем дори да променим някой символ.
 
 Пример:
-char  account []  =  “Scorpion333”;
+
+char  account [ ]  =  “Scorpion333”;
+
 cout << account[8] << endl;		                // 3
+
 int a = 4;
+
 cout << account[0] << " " << account[a] << endl; 	// S p
+
 account[9] = '4';
+
 account[10] = account[10] + 2;
+
 cout << account << endl;				// Scorpion345
 
 #Операции с низове
@@ -36,5 +44,6 @@ cout << account << endl;				// Scorpion345
 Дължината представлява броят на символите (включително интервалите)
 
 Пример:
-char assistant[] = "Peter"
+char assistant[ ] = "Peter"
+
 cout << strlen(assistant) + 3 <<  endl;		// 8
