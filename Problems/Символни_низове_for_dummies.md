@@ -21,17 +21,28 @@ char  my_string [ ]  =  “I like C++”;
 
 char  account [ ]  =  “Scorpion333”;
 
-cout << account[8] << endl;		                // 3
+cout << account[8] << endl;
 
 int a = 4;
 
-cout << account[0] << " " << account[a] << endl; 	// S p
+cout << account[0] << " " << account[a] << endl;
 
 account[9] = '4';
 
 account[10] = account[10] + 2;
 
-cout << account << endl;				// Scorpion345
+cout << account << endl;
+
+/*
+
+На екрана:
+3
+
+S p
+
+Scorpion345
+
+*/
 
 #Операции с низове
 Има много функции, които да приложим върху низове, но засега е достътъчно да знаем, че:
@@ -44,6 +55,8 @@ cout << account << endl;				// Scorpion345
 Дължината представлява броят на символите (включително интервалите)
 
 Пример:
-char assistant[ ] = "Peter"
+char assistant[ ] = "Peter";
 
-cout << strlen(assistant) + 3 <<  endl;		// 8
+cout << strlen(assistant) + 3 <<  endl;
+
+// На екрана: 8
