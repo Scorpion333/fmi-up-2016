@@ -36,6 +36,7 @@ cout << account << endl;
 /*
 
 На екрана:
+
 3
 
 S p
@@ -55,6 +56,7 @@ Scorpion345
 Дължината представлява броят на символите (включително интервалите)
 
 Пример:
+
 char assistant[ ] = "Peter";
 
 cout << strlen(assistant) + 3 <<  endl;
