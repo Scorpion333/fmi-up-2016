@@ -1,0 +1,229 @@
+	0.Pr. 1 - Points in circle with sqrt
+
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	for (int x = -5; x <= 5; x++)
+	{
+		for (int y = -5; y <= 5; y++)
+		{
+			double distance = sqrt(x*x + y*y);
+			if (distance <= 5)
+			{
+				cout << "(" << x << ", " << y << ")" << endl;
+			}
+		}
+	}
+	return 0;
+}
+
+--- --- --- ---
+
+	1.Pr. 1 - Points in circle without sqrt
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (int x = -5; x <= 5; x++)
+	{
+		for (int y = -5; y <= 5; y++)
+		{
+			if (x*x + y*y <= 25)
+			{
+				cout << "(" << x << ", " << y << ")" << endl;
+			}
+		}
+	}
+	return 0;
+}
+
+--- --- --- ---
+
+	2.Pr. 2 - Points in square - for maniacs!
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	for (int x = -5; x <= 5; x++)
+	{
+		for (int y = -5; y <= 5; y++)
+		{
+			if (y <= -x + 5 && y <= x + 5 && y >= -x - 5 && y >= x - 5)
+			{
+				cout << "(" << x << ", " << y << ")" << endl;
+			}
+		}
+	}
+	return 0;
+}
+
+--- --- --- ---
+
+	3.Pr. 3 - Number of digits
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	int digits = 0;
+	
+	while (n > 0)
+	{
+		digits++;
+		n = n / 10;
+	}
+	cout << "digits = " << digits << endl;
+
+	return 0;
+}
+
+--- --- --- ---
+
+	4.Pr. 4 - Sum of digits
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	int sum = 0;
+	
+	while (n > 0)
+	{
+		sum = sum + n % 10;
+		n = n / 10;
+	}
+	cout << "sum = " << sum << endl;
+
+	return 0;
+}
+
+--- --- --- ---
+
+	5.Pr. 5 - Prime number - with bool
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int n;
+	cin >> n;
+	
+	int d = 2;
+	bool no_divisors_found = true;
+
+	while (d <= n / 2 && no_divisors_found)
+	{
+		if (n % d == 0)
+			no_divisors_found = false;
+		else
+			no_divisors_found = true;
+		d++;
+	}
+
+	if (no_divisors_found)
+		cout << n << " is prime." << endl;
+	else
+		cout << n << " is not prime." << endl;
+
+	return 0;
+}
+
+--- --- --- ---
+
+	6.Pr. 6 - Grades - default 6 and step back in the end
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double grade = 6;
+	double sum = 0;
+	int br = 0;
+
+	while (grade >= 2 && grade <= 6)
+	{
+		cin >> grade;
+		sum = sum + grade;
+		br++;
+	}
+	sum = sum - grade;
+	br--;
+
+	if (br == 0)
+		cout << "No grades!" << endl;
+	else
+		cout << "Average grade: " << sum / br << endl;
+
+	return 0;
+}
+
+--- --- --- ---
+
+	7.Pr. 6 - Grades - cin before while
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	double grade;
+	double sum = 0;
+	int br = 0;
+
+	cin >> grade;
+
+	while (grade >= 2 && grade <= 6)
+	{
+		sum = sum + grade;
+		br++;
+		cin >> grade;
+	}
+	
+	if (br == 0)
+		cout << "No grades!" << endl;
+	else
+		cout << "Average grade: " << sum / br << endl;
+
+	return 0;
+}
+
+--- --- --- ---
+
+	8.Pr. 8 - Sentence
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	char sentence[] = "A phrase with a lot of A-s and a-s and an exclamation mark at the end!";
+	
+	int br = 0;
+	int i = 0;
+	while (sentence[i] != '.'  &&  sentence[i] != '!'  &&  sentence[i] != '?')
+	{
+		if (sentence[i] == 'a' || sentence[i] == 'A')
+		{
+			br++;
+		}
+		i++;
+	}
+	cout << "Number of letters A: " << br << endl;
+
+	return 0;
+}
